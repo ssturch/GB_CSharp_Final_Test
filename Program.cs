@@ -1,15 +1,11 @@
-﻿Console.Write("Введите количество строк:");
+﻿Console.Write("Введите количество строк: ");
 int qtyString = int.Parse(Console.ReadLine());
-Console.Write("Введите строки для анализа:");
+Console.WriteLine("Введите строки для анализа:");
 string [] inputArray = InputStringArray(qtyString);
 Console.Write("Получен массив строк: ");
 ShowStringArray(inputArray);
 Console.Write("Преобразованный массив строк: ");
 ShowStringArray(StrArrProcByStrLength(inputArray, 3)); // цифра 3 в функции StrArrProcByStrLength не является магическим числом, оно соответсвует условию задачи
-
-
-
-
 
 // Данная функция выводит строковый массив в консоль
 void ShowStringArray (string [] array)
@@ -20,7 +16,7 @@ void ShowStringArray (string [] array)
 // Данная функция создает массив из строк введенных пользователем
 string [] InputStringArray (int length)
 {
-    string [] result= new string [0];
+    string [] result= new string [length];
     for (int i = 0; i < length; i ++)
     {
         string inputString = Console.ReadLine();
